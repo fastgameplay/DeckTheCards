@@ -11,7 +11,7 @@ public class CardImageDownloader : MonoBehaviour
     void Start(){
         UpdateImage();
     }
-    public void UpdateImage(){
+    void UpdateImage(){
         if(_cardImage == null){
             Debug.LogWarning("_cardImage is null!");
             return;
