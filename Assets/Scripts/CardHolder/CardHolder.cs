@@ -7,7 +7,14 @@ public class CardHolder : MonoBehaviour
     [SerializeField] float _height;
     [SerializeField] float _additionalHeight;
     [SerializeField] float _maxAngle;
-    public int Length{get {return _cards.Count;}}
+    public int Length{
+        get {
+
+        _cards.RemoveAll(s => s == null);
+
+        return _cards.Count;
+        }
+    }
 
     List<Card> _cards = new List<Card>();
     float _halfAngle;
@@ -18,7 +25,6 @@ public class CardHolder : MonoBehaviour
     }
     public void AddCard(Card card){
         _cards.Add(card);
-        _stepAngle = _maxAngle/ (_cards.Count +1);
         RecalculateCards();
     }
     public Card GetCard(int id){
@@ -33,8 +39,9 @@ public class CardHolder : MonoBehaviour
 
 
     public void RecalculateCards(){
-        _cards.RemoveAll(s => s == null);
 
+        _stepAngle = _maxAngle/ (Length +1);
+        
         for (int i = 0; i < _cards.Count; i++){
             float angle = ((i + 1) * _stepAngle) - _halfAngle;
             _cards[i].transform.localPosition = CalculatePosition(angle,_height);
@@ -42,9 +49,10 @@ public class CardHolder : MonoBehaviour
         }
     }
 
-    public void MoveCardUp(int id){
+    public void SelectCard(int id){
+        if(_cards.Count == 0) return;
         RecalculateCards();
         float angle = ((id + 1) * _stepAngle) - _halfAngle;
-        _cards[id].transform.localPosition = CalculatePosition(angle,_height+_additionalHeight);
+        _cards[id].transform.localPosition = CalculatePosition(angle, _height + _additionalHeight);
     }
 }

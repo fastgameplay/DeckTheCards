@@ -16,7 +16,6 @@ public class GenerateCards : MonoBehaviour
         int cardCount = Random.Range(_cardCountRange.x,_cardCountRange.y);
         for (int i = 0; i < cardCount; i++){
             _holder.AddCard(Instantiate(_cardPrefab,Vector3.zero,Quaternion.identity,transform));
-            _holder.MoveCardUp(i);
         }
     }
 }
