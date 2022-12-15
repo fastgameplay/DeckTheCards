@@ -1,17 +1,17 @@
 using UnityEngine;
-[RequireComponent(typeof(Card))]
+[RequireComponent(typeof(CardHealth))]
+[RequireComponent(typeof(CardDamage))]
+[RequireComponent(typeof(CardMana))]
 public class CardRandomizer : MonoBehaviour
 {
     [SerializeField] Vector2Int _damageRange; 
     [SerializeField] Vector2Int _healthRange;
     [SerializeField] Vector2Int _manaRange;
 
-    Card _card;
     void Start(){
-        _card = GetComponent<Card>();
-        _card.Health = Random.Range(_healthRange.x,_healthRange.y);
-        _card.Damage = Random.Range(_damageRange.x,_damageRange.y);
-        _card.Mana = Random.Range(_manaRange.x,_manaRange.y);
+        GetComponent<CardHealth>().Health = Random.Range(_healthRange.x,_healthRange.y);
+        GetComponent<CardDamage>().Damage = Random.Range(_damageRange.x,_damageRange.y);
+        GetComponent<CardMana>().Mana = Random.Range(_manaRange.x,_manaRange.y);
     }
 
 }

@@ -34,16 +34,13 @@ public class HolderElementRandomizer : MonoBehaviour
 
         switch(Random.Range(0,3)){
             case 0:
-                Debug.Log("Health");
                 card.Health = value;
                 if(value <= 0) _cardHolder.RecalculateCards();
                 break;
             case 1:
-                Debug.Log("Damage");
                 card.Damage = value;
                 break;
             case 2:
-                Debug.Log("Mana");
                 card.Mana = value;
                 break;
         }

@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cardPrefab: {fileID: 3277491937261443746, guid: 1f2515a043bd5d74cb5f7c78c2e268ff, type: 3}
-  _cardCountRange: {x: 4, y: 5}
+  _cardCountRange: {x: 4, y: 6}
   _height: 1200
   _activeHeight: 1400
 --- !u!114 &97276026
