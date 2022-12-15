@@ -6,11 +6,26 @@ public class HolderElementRandomizer : MonoBehaviour
 {
     [SerializeField] CardHolder _cardHolder;
     [SerializeField] Vector2Int _randomRange;
+
+    int additionalIndex{
+        get{
+            if(_cardHolder.Length < lastLength){
+                lastLength = _cardHolder.Length;
+                return 0;
+            }
+            lastLength = _cardHolder.Length;
+            return 1;
+        }
+    }
+
     int currentID = -1;
+    int lastLength = -1;
     public void RandomizeNext(){
         if(_cardHolder.Length == 0) return;
-        currentID = (currentID + 1) % _cardHolder.Length;
-        
+
+        currentID = (currentID + additionalIndex) % _cardHolder.Length;
+
+
         _cardHolder.SelectCard(currentID);
 
         Card card = _cardHolder.GetCard(currentID);
