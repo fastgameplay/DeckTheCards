@@ -175,6 +175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cardPrefab: {fileID: 3277491937261443746, guid: 1f2515a043bd5d74cb5f7c78c2e268ff, type: 3}
   _cardCountRange: {x: 4, y: 5}
+  _height: 1200
+  _activeHeight: 1400
 --- !u!114 &97276026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,8 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a5ee950c3930f40a19eba430133e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _height: 1200
-  _additionalHeight: 150
   _maxAngle: 60
 --- !u!1 &519420028
 GameObject:

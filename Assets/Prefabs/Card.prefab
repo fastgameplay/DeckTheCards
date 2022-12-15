@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 3277491937261443750}
   - component: {fileID: 3277491937261443745}
   - component: {fileID: 3277491937261443747}
+  - component: {fileID: 7092510378475870853}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -553,6 +554,19 @@ MonoBehaviour:
   _damageRange: {x: 1, y: 15}
   _healthRange: {x: 1, y: 15}
   _manaRange: {x: 1, y: 15}
+--- !u!114 &7092510378475870853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277491937261443748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f527a8e57722ea74fbff0acda3349f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1000
 --- !u!1 &3277491937490416885
 GameObject:
   m_ObjectHideFlags: 0
